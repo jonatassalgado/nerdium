@@ -10,11 +10,21 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
+		
 		<div class="navbar-header">
-			<a class="navbar-brand">
-				Blog
-			</a>
+			<a class="navbar-brand"> Blog </a>
 		</div>
+
+		<ul class="nav navbar-nav navbar-right">
+			<% if user_signed_in? %>
+				<li><%= link_to current_user.first_name, edit_user_registration_path %></li>
+				<li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+			<% else %>
+				<li><%= link_to "Registrar", new_user_registration_path %></li>
+				<li><%= link_to "Entrar", new_user_session_path %></li>
+			<% end %>
+		</ul>
+
 	</div>
 </nav>
 
