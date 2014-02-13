@@ -21,9 +21,13 @@
 <div class="container">
 	<di class="cointainer-body">
 
-		
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<% unless notice.blank? %>
+			<p class="alert alert-info"><%= notice %></p>
+		<% end %>
+
+		<% unless alert.blank? %>
+			<p class="alert alert-danger"><%= alert %></p>
+		<% end %>
 
 		<%= yield %>
 	</di>
