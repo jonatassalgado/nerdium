@@ -31,17 +31,25 @@
 <div class="container">
 	<di class="cointainer-body">
 
-		<% unless notice.blank? %>
-			<p class="alert alert-info"><%= notice %></p>
+		<% if flash[:notice] %>
+			<p class="alert alert-info">
+				<button class="close" data-dismiss="alert">x</button>
+				<%= notice %>
+			</p>
 		<% end %>
 
 		<% unless alert.blank? %>
-			<p class="alert alert-danger"><%= alert %></p>
+			<p class="alert alert-danger">
+				<button class="close" data-dismiss="alert">x</button>
+				<%= alert %>
+			</p>
 		<% end %>
 
 		<%= yield %>
 	</di>
 </div>
+
+<%= params.inspect %>
 
 </body>
 </html>
