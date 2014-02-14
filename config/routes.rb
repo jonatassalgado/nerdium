@@ -1,10 +1,20 @@
 Blog::Application.routes.draw do
   devise_for :users
+
+  devise_scope :user do
+    get 'registrar', to: 'devise/registrations#new', as: :registrar
+    get 'entrar', to: 'devise/sessions#new', as: :entrar
+    get 'sair', to: 'devise/sessions#destroy', as: :sair
+  end
+
+
   resources :posts
 
   resources :users
 
   root to: 'posts#index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

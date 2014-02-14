@@ -18,10 +18,10 @@
 		<ul class="nav navbar-nav navbar-right">
 			<% if user_signed_in? %>
 				<li><%= link_to current_user.first_name, edit_user_registration_path %></li>
-				<li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+				<li><%= link_to "Sair", sair_path %></li>
 			<% else %>
-				<li><%= link_to "Registrar", new_user_registration_path %></li>
-				<li><%= link_to "Entrar", new_user_session_path %></li>
+				<li><%= link_to "Registrar", registrar_path %></li>
+				<li><%= link_to "Entrar", entrar_path %></li>
 			<% end %>
 		</ul>
 
@@ -49,7 +49,6 @@
 	</di>
 </div>
 
-<%= params.inspect %>
 
 </body>
 </html>
