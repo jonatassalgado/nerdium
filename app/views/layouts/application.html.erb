@@ -31,19 +31,15 @@
 <div class="container">
 	<di class="cointainer-body">
 
-		<% if flash[:notice] %>
-			<p class="alert alert-info">
-				<button class="close" data-dismiss="alert">x</button>
-				<%= notice %>
-			</p>
-		<% end %>
 
-		<% unless alert.blank? %>
-			<p class="alert alert-danger">
+	<% flash.each do |type, message|%>
+
+			<p class="alert <%= flash_class type %>">
 				<button class="close" data-dismiss="alert">x</button>
-				<%= alert %>
+				<%= message %>
 			</p>
-		<% end %>
+
+	<% end %>
 
 		<%= yield %>
 	</di>

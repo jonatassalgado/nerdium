@@ -4,5 +4,9 @@
 
 
   $(document).ready ->
-  	$("[data-behaviour~=datepicker]").datepicker()
+  	$("[data-behaviour~=datepicker]").datepicker 
+  		format: "dd/mm/yyyy"
+  		language: "pt-BR"
+  		todayHighlight: true
+  		todayBtn: true
   	return
