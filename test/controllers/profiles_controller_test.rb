@@ -18,4 +18,11 @@ class ProfilesControllerTest < ActionController::TestCase
   	assert_not_nil assigns(:posts)
   end
 
+  test "mostrar somente os posts do usuario no perfil"  do
+    get :show, id: users(:jonatas).profile_name
+    assigns(:posts).each do |post|
+      assert_equal users(:jonatas), post.user
+    end
+  end
+
 end
