@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-user_block:
+jonatas:
  first_name: Jonatas Eduardo
  last_name: Salgado
- profile_name: jonatase duardo
+ profile_name: jonataseduardo
  email: email@gmail.com

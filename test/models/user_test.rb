@@ -26,7 +26,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "a user should have a unique profile name" do
   	user = User.new
-  	user.profile_name = users(:user_block).profile_name
+  	user.profile_name = users(:jonatas).profile_name
 
   	assert !user.save
   	assert !user.errors[:profile_name].empty?
@@ -34,7 +34,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "a user should have a unique email" do
     user = User.new
-    user.email = users(:user_block).email
+    user.email = users(:jonatas).email
 
     assert !user.save
     assert !user.errors[:email].empty?
