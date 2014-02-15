@@ -58,5 +58,13 @@ class UserTest < ActiveSupport::TestCase
 		assert user.errors[:profile_name].include?("O nome do perfil nao pode ter espacos.")
 	end
 
+  test "o usuario deve ter o nome de perfil do tipo correto" do
+    user = User.new(first_name:"Jonatas", last_name: "Salgado", email: "jottaeblog@gmail.com")
+    user.password = user.password_confirmation = "asdadadasad"
+    user.profile_name = "jonataseduardo_1"
+
+    assert user.valid?
+  end
+
 
 end
