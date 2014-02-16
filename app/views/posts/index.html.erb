@@ -1,12 +1,18 @@
-<div class="page-header">
-  <h1>Posts</h1>
+	
+<div class="row">	
+	<div class="col-md-8 col-md-offset-2">
+		
+		<div class="page-header">
+		  <h2>Posts</h2>
+		  <% if user_signed_in? %>
+				<%= link_to "Criar novo post", new_post_path, class: "btn btn-primary pull-right" %>
+			<% end %>
+		</div>
 
-  <% if user_signed_in? %>
-		<%= link_to "Postar", new_post_path, class: "btn btn-primary" %>
-	<% end %>
+			<%= render 'all_posts' %>
 
+		
+	</div>
 </div>
 
 
-
-<%= render 'all_posts' %>
