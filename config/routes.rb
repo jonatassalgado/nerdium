@@ -13,7 +13,7 @@ Blog::Application.routes.draw do
 
   resources :users
 
-  root to: 'posts#index'
+  root to: 'posts#index', as: :home 
 
   get '/:id', to: 'profiles#show'
 
