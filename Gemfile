@@ -12,7 +12,7 @@ gem 'simple_form'
 
 gem 'bootstrap-datepicker-rails'
 
-gem 'paperclip'
+gem "paperclip", "~> 3.5.3"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

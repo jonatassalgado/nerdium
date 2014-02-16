@@ -1,8 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+	<%= image_tag @user.avatar.url(:thumb) %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Sobrenome:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Nome de perfil:</strong>
+  <%= @user.profile_name %>
 </p>
 
 <p>
@@ -10,10 +24,7 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
