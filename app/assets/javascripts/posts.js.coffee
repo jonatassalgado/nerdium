@@ -11,6 +11,9 @@
   		todayBtn: true
   	return
 
-  	$(".has-tooltip").tooltip "toggle"
+  $ ->
+  	$(".has-tooltip").tooltip()
+  return
+
 
 

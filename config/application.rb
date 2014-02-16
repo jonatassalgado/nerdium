@@ -25,6 +25,9 @@ module Blog
 
     # Glyphicons of bootstrap
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
+    # Internacionalização i18n pt-BR
+    config.i18n.default_locale = "pt-BR"
   end
 end
 

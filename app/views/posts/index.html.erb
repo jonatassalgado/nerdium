@@ -21,7 +21,7 @@
 			<% if user_signed_in? %>
 				<div class="links-signed">
 					<%= link_to "Criar novo post", new_post_path, class: "btn btn-primary" %>
-					<%= link_to sair_path, class: "has-tooltip", title: "Sair", data: { toogle: "tooltip"} do %><div class="glyphicon glyphicon-log-out"></div><% end %>
+					<%= link_to sair_path do %><div title="Sair" class="glyphicon glyphicon-log-out has-tooltip"></div><% end %>
 					<%= link_to edit_user_registration_path do %><div class="glyphicon glyphicon-cog"></div><% end %>
 				</div>
 			<% else %>

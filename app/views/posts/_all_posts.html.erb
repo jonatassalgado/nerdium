@@ -20,7 +20,7 @@
       </div>
 
       <div class="meta">
-        <%= link_to time_ago_in_words(post.created_at), post %>
+        <%= link_to time_ago_in_words(post.created_at).capitalize + " atrás", post %>
 
         <% if user_signed_in? %>
           <% if current_user.id == post.user.id %>
