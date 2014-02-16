@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # Gem friendly_id
+  extend FriendlyId
+  friendly_id :profile_name, use: :slugged
+
+
   has_many :posts
 
   validates :first_name, presence: true

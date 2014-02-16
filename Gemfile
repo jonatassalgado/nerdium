@@ -14,6 +14,8 @@ gem 'bootstrap-datepicker-rails'
 
 gem "paperclip", "~> 3.5.3"
 
+gem 'friendly_id', '~> 5.0.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
