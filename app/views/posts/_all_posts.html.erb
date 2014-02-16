@@ -8,7 +8,7 @@
       <div class="item">
         
         <%= link_to post.user.profile_name do %>
-          <%= image_tag post.user.avatar.url(:thumb), size: "55x55", class: "avatar img-circle" %>
+          <%= image_tag post.user.avatar.url(:thumb), size: "55x55", class: "avatar img-circle has-tooltip", data:{placement: "right"}, title: post.user.first_name %>
         <% end %>
         
         <h2><%= link_to post.title, post %></h2>

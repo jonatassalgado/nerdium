@@ -22,7 +22,7 @@
 				<div class="links-signed">
 					<%= link_to "Criar novo post", new_post_path, class: "btn btn-primary" %>
 					<%= link_to sair_path do %><div title="Sair" class="glyphicon glyphicon-log-out has-tooltip"></div><% end %>
-					<%= link_to edit_user_registration_path do %><div class="glyphicon glyphicon-cog"></div><% end %>
+					<%= link_to edit_user_registration_path do %><div title="Configurações" class="glyphicon glyphicon-cog has-tooltip"></div><% end %>
 				</div>
 			<% else %>
 				<div class="links-unsigned">

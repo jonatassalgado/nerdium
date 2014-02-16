@@ -4,16 +4,15 @@
 
 
   $(document).ready ->
-  	$("[data-behaviour~=datepicker]").datepicker 
-  		format: "dd/mm/yyyy"
-  		language: "pt-BR"
-  		todayHighlight: true
-  		todayBtn: true
-  	return
+	  $("[data-behaviour~=datepicker]").datepicker
+	    format: "dd/mm/yyyy"
+	    language: "pt-BR"
+	    todayHighlight: true
+	    todayBtn: true
 
-  $ ->
-  	$(".has-tooltip").tooltip()
-  return
+	  $(".has-tooltip").tooltip()
+	  return
+  
 
 
 
