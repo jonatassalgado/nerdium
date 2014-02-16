@@ -1,24 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="row">	
+	<div class="col-md-8 col-md-offset-2">
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+		<ul class="bloco-posts">
 
-<p>
-  <strong>Posted date:</strong>
-  <%= @post.posted_date %>
-</p>
+  		<li class="post">
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
+      	<div class="item">
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      		<%= link_to @post.user.profile_name do %>
+	          <%= image_tag @post.user.avatar.url(:thumb), size: "55x55", class: "avatar img-circle has-tooltip", data:{placement: "right"}, title: @post.user.first_name %>
+	        <% end %>
+
+					<h2><%= link_to @post.title, @post %></h2>
+
+					<div class="resumo">
+	          <%= @post.content %>
+	        </div>
+
+				</div>
+
+
+				<div class="meta">
+	        <%= link_to time_ago_in_words(@post.created_at).capitalize + " atrás", @post %>
+
+	        <% if user_signed_in? %>
+	          <% if current_user.id == @post.user.id %>
+	            <span class="admin">
+	              <%= link_to "Editar", edit_post_path(@post) %>
+	              <%= link_to "Excluir", @post, :method => :delete, data: { confirm: "Você tem certeza que deseja excluir #{@post.title}?"} %>
+	            </span>
+	          <% end %>
+	        <% end %>
+	      </div>
+
+
+			</li>
+
+		</ul>
+
+
+		<%= link_to home_path do %>
+			<button type="button" class="btn btn-lg btn-default has-tooltip" title="Voltar" data-placement="left">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+			</button>
+		<% end %>
+
+	</div>
+</div>
+
+
