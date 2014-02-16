@@ -2,9 +2,124 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posts{
-	border-bottom: 1px solid #cccccc;
-	padding: 12px 0;
+$font-primary:'Vollkorn', serif;
+$font-secondary: 'Lato', sans-serif;
+
+body{
+	margin: 0 !important;
+}
+
+.navbar{
+	margin: 0;
+	display: none
+}
+
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+.painel{
+  background-attachment: fixed;
+  background-image: url("/assets/painel_bg_1.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  box-shadow: 0 -190px 150px rgba(0, 0, 0, 0.75) inset;
+  height: 350px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.painel-float{
+	height: 250px;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+		& .btn-primary{
+      background-color: rgba(0, 0, 0, 0);
+	    border: 2px solid #FFFFFF;
+	    color: #FFFFFF;
+	    font-family: "Lato",sans-serif;
+	    font-size: 14px;
+	    margin: 35px auto 0;
+	    padding: 10px;
+  	}
+  	& .titulo{
+  		font-family: $font-primary;
+	    color: #FFFFFF;
+	    font-size: 80px;
+	    margin: 100px 0 0;
+	    text-align: center;
+  	}
+  	& .descricao{
+	    color: #FFFFFF;
+	    font-family: $font-secondary;
+	    font-size: 17px;
+	    margin: -15px 0 0;
+	    text-align: center;
+  	}
+}
+
+.bloco-posts{
+	list-style:  none outside none;
+	margin: 35px 0 0;
+}
+
+.post{
+	padding: 12px 0 55px;
+
+	h2{
+		margin: 0;
+		width: 85%;
+	}
+
+	h2 a{
+		color: #333332;
+    display: block;
+    font-family: $font-primary;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    	&:hover{
+    		text-decoration: none;
+    	}
+	}
+
+	& .resumo{
+		color: #666666;
+    font-family: 'lato',sans-serif;
+    font-size: 15px;
+    width: 85%;
+	}
+
+	& .item{
+	display: block;
+	padding: 15px 0;
+	word-wrap: break-word;
+		& .avatar{
+			float:right;
+			overflow: hidden;
+		}
+	}
+
+	& .meta{
+    color: #B3B3B1;
+    float: left;
+    font-size: 11px;
+    	a{
+    		color: #B3B3B1;
+    		margin-right: 6px;
+    			&:hover{
+    				text-decoration: underline;
+    			}
+    	}
+	}
+
 }
 
 .form-group{
@@ -25,4 +140,12 @@
 			margin-top:15px;
 		}
 
+}
+
+
+
+.meta{
+  color: #666666;
+  font-family: Lucida Grande,sans-serif;
+  font-size: 12px;
 }
