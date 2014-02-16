@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   friendly_id :profile_name, use: :slugged
 
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   validates :first_name, presence: true
   validates :last_name, presence: true

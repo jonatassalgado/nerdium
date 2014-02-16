@@ -10,3 +10,7 @@
   		todayHighlight: true
   		todayBtn: true
   	return
+
+  	$(".has-tooltip").tooltip "toggle"
+
+
