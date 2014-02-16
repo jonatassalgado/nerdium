@@ -22,6 +22,9 @@ module Blog
 
     # Devise
     config.assets.initialize_on_precompile = false
+
+    # Glyphicons of bootstrap
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
 

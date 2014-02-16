@@ -4,5 +4,5 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
   friendly_id :title, use: :slugged
 
-	belongs_to :user
+	belongs_to :user, dependent: :destroy
 end

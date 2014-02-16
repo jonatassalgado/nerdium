@@ -11,16 +11,24 @@
 
 		<div class="painel-float">
 
-				<div class="titulo">
-					Cidade.vc
-				</div>
-				<div class="descricao">
-					O blog do projeto que quer potencializar a interação das pessoas com/na a cidade
-				</div>
+			<div class="titulo">
+				Cidade.vc
+			</div>
+			<div class="descricao">
+				O blog do projeto que quer potencializar a interação das pessoas com/na a cidade
+			</div>
 
 			<% if user_signed_in? %>
-				<%= link_to "Criar novo post", new_post_path, class: "btn btn-primary" %>
+				<div class="links-signed">
+					<%= link_to "Criar novo post", new_post_path, class: "btn btn-primary" %>
+					<%= link_to sair_path do %><div class="glyphicon glyphicon-log-out"></div><% end %>
+				</div>
+			<% else %>
+				<div class="links-unsigned">
+					<%= link_to "Registrar", registrar_path %><%= link_to "Entrar", entrar_path %>
+				</div>
 			<% end %>
+
 		</div>
 
 
