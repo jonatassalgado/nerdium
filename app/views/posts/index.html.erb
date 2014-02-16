@@ -1,8 +1,12 @@
 <div class="page-header">
   <h1>Posts</h1>
+
+  <% if user_signed_in? %>
+		<%= link_to "Postar", new_post_path, class: "btn btn-primary" %>
+	<% end %>
+
 </div>
 
-<%= link_to "Postar", new_post_path, class: "btn btn-primary" %>
 
 
 <%= render 'all_posts' %>
