@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @titulo = "Editar post"
   end
 
   # POST /posts
