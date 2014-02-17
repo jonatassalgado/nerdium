@@ -731,6 +731,9 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+.centralize {
+    padding: 65px 0 0;
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -4432,10 +4435,15 @@ a.thumbnail.active {
   color: #333;
 }
 .alert {
-  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  left: 0;
   margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  padding: 6px 15px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 .alert h4 {
   margin-top: 0;

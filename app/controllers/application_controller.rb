@@ -16,4 +16,21 @@ class ApplicationController < ActionController::Base
 			u.permit(:first_name, :last_name, :profile_name, :password, :password_confirmation, :current_password, :avatar)
 		end
 	end
+
+	# authenticate is admin for Devise
+	def authenticate_admin
+		if user_signed_in?
+	    unless current_user.admin 
+	      redirect_to home_path
+	      false
+	    else
+	      true
+	    end
+	  else
+	  	redirect_to entrar_path
+	  	false
+	  end
+  end
+
+
 end

@@ -12,6 +12,11 @@
 
 	  $(".has-tooltip").tooltip()
 
+	  setTimeout( ->
+	  	$(".alert").fadeOut()
+	  	return
+	  , 5000)
+
 	  $("#wysihtml5-textarea").wysihtml5
 	  	"font-styles": true 
 		  emphasis: true 
@@ -20,6 +25,9 @@
 		  link: true 
 		  image: true 
 		  color: false 
+
+		
+		
 	  return
   
 
