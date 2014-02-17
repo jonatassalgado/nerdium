@@ -19,7 +19,11 @@ body{
     border: 0;
 }
 
-
+h2{
+	font-family: $font-primary;
+	font-size: 28px;
+	font-weight: 900;
+}
 
 .painel{
   background-attachment: fixed;
@@ -39,6 +43,12 @@ body{
 	position: relative;
 	z-index: 2;
 	text-align: center;
+		& a{
+			color: #ffffff;
+			&:hover{
+				text-decoration: none;
+			};
+		}
 		& .btn-primary{
       background-color: rgba(0, 0, 0, 0);
 	    border: 2px solid #FFFFFF;
