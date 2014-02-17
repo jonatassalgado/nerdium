@@ -6,15 +6,23 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Sistema de autenticação de usuários
 gem 'devise'
 
+# Maior controle e customização de inputs
 gem 'simple_form'
 
+# Plugin para criação de calendário em inputs de datas
 gem 'bootstrap-datepicker-rails'
 
+# gerenciador de upload de imagens
 gem "paperclip", "~> 3.5.3"
 
+# Urls amigáveis
 gem 'friendly_id', '~> 5.0.0'
+
+# Editor de texto
+gem 'bootstrap-wysihtml5-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

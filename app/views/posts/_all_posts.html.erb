@@ -14,7 +14,7 @@
         <h2><%= link_to post.title, post %></h2>
        
         <div class="resumo">
-          <%= post.content[0..140]%> ...
+          <%= raw post.content[0..140]%> ...
         </div>
 
       </div>

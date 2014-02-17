@@ -11,6 +11,15 @@
 	    todayBtn: true
 
 	  $(".has-tooltip").tooltip()
+
+	  $("#wysihtml5-textarea").wysihtml5
+	  	"font-styles": true 
+		  emphasis: true 
+		  lists: true 
+		  html: false 
+		  link: true 
+		  image: true 
+		  color: false 
 	  return
   
 
