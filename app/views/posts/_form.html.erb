@@ -1,22 +1,21 @@
-<%= simple_form_for(@post, html: {class:"form-horizontal"}) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    
+<div class="row centralize">
+    <div class="col-md-6 col-md-offset-3 well well-lg">
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+    <%= simple_form_for(@post, html: {class:"form-horizontal"}) do |f| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 well well-lg">
-
-        <h2><%= @titulo %></h2>
+        <div class="page-header"><h2><%= @titulo %></h2></div>
 
         
         <div class="form-group">
@@ -35,13 +34,10 @@
         <div class="form-group">
           <%= f.submit "Criar post", class: "btn btn-success btn-lg pull-right" %>
         </div>
+      
+
+    <% end %>
 
 
-        
-
-      </div>
-    </div>
-
-  
-
-<% end %>
+  </div>
+</div>

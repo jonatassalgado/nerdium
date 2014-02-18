@@ -11,7 +11,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 55px 0 0 0;
 }
 article,
 aside,
@@ -399,8 +398,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 h1 small,
 .h1 small,
@@ -734,7 +733,7 @@ pre code {
   overflow-y: scroll;
 }
 .centralize {
-    padding: 65px 0 0;
+    padding: 15px 0 0;
 }
 .container {
   padding-right: 15px;
@@ -3480,11 +3479,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
-  background-color: #eee;
+  text-decoration: underline;
 }
 .nav > li.disabled > a {
   color: #999;
@@ -3971,6 +3971,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a {
   color: #777;
+}
+.navbar .navbar-nav > li > a {
+  color: #000000;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -5078,6 +5081,7 @@ a.list-group-item-danger.active:focus {
 .well-lg {
   padding: 24px;
   border-radius: 6px;
+  overflow: hidden;
 }
 .well-sm {
   padding: 9px;

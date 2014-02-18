@@ -1,33 +1,37 @@
-<h2>Criar conta</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }, defaults: {input_html: {class: "form-control"}, wrapper_html: {class: "form-group"}} ) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="centralize col-md-8 col-md-offset-2">
 
-  
-    <%= f.input :first_name, label: "Nome" %>
- 
-    <%= f.input :last_name, label: "Sobrenome" %>
- 
-    <%= f.input :profile_name, label: "Username" %>
-  
-    <%= f.input :bio, as: :text, label: "Bio" %>
-  
-    <%= f.input :avatar, as: :file, label: "Avatar", input_html: {class: ""} %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "well well-lg", method: :put, multipart: true }, defaults: {input_html: {class: "form-control"}, wrapper_html: {class: "form-group"}} ) do |f| %>
+      <%= devise_error_messages! %>
 
-    <%= f.input :email, as: :email, label: "Email" %></div>
+        <div class="page-header"><h2>Criar usuário</h2></div>
+      
+        <%= f.input :first_name, label: "Nome" %>
+     
+        <%= f.input :last_name, label: "Sobrenome" %>
+     
+        <%= f.input :profile_name, label: "Username" %>
+      
+        <%= f.input :bio, as: :text, label: "Bio", input_html: {rows: 10} %>
+      
+        <%= f.input :avatar, as: :file, label: "Avatar", input_html: {class: ""} %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Esperando confirmação do email: <%= resource.unconfirmed_email %></div>
+        <%= f.input :email, as: :email, label: "Email" %>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Esperando confirmação do email: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <%= f.input :password, as: :password, input_html: {autocomplete: "off"}, label: "Senha" %>
+
+        <%= f.input :password_confirmation, as: :password, input_html: {autocomplete: "off"}, label: "Confirmação da senha", hint: "Repita a senha." %>
+
+        <div class="form-group">
+          <%= f.submit "Cadastrar", class: "btn btn-success btn-lg pull-right" %>
+        </div>
+
     <% end %>
 
-    <%= f.input :password, as: :password, input_html: {autocomplete: "off"}, label: "Senha" %></div>
+  </div>
 
-    <%= f.input :password_confirmation, as: :password, input_html: {autocomplete: "off"}, label: "Confirmação da senha", hint: "Repita a senha." %></div>
-
-
-  <div><%= f.submit "Cadastrar" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<%= render "posts/return_button" %>
+  <%= render "posts/return_button" %>
