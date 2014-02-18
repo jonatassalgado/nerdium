@@ -31,4 +31,18 @@
   	}
 }
 
+.bio{
+  float: left;    
+  font-size: 12px;
+  line-height: 1.4em;
+  margin: 6px 0 0;
+}
+
+.big-dots {
+  font-size: 70px;
+  line-height: 0;
+  position: relative;
+  top: -6px;
+}
+
 @import 'posts'

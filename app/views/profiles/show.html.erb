@@ -1,4 +1,21 @@
 
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title" id="myModalLabel"><%= @user.first_name %></h4>
+      </div>
+      <div class="modal-body">
+        <%= @user.bio %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="painel">
 
 </div>
@@ -9,12 +26,14 @@
 
 		<div class="painel-float">
 
-			<%= link_to @user.profile_name do %>
+			<%= link_to "#", class: "has-tooltip", title: "Ver perfil", data: {toggle: "modal", target: "#modal", placement: "right"} do %>
         <%= image_tag @user.avatar.url(:thumb), size: "100x100", class: "avatar img-circle has-tooltip" %>
       <% end %>
 
 			<div class="descricao">
-				<b><%= @user.first_name %></b>
+				<span><b><%= @user.first_name %></b></span><br/>
+				<span class="bio"><%= @user.bio[0..400] %><br/>
+				<%= link_to " ...", "#", class: "big-dots", data: {toggle: "modal", target: "#modal"} %></span>
 
 			</div>
 
@@ -55,6 +74,11 @@
 		  <% end %>
 
 		</ul>
-		
+
+
+		<%= render "posts/return_button" %>
+
+
 	</div>
 </div>
+
