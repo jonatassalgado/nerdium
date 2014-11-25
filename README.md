@@ -1,4 +1,4 @@
-http://i.imgur.com/OWcSZPq.png
+![alt tag](http://i.imgur.com/OWcSZPq.png)
 
 # Nerdium
 
@@ -144,8 +144,6 @@ To do this on GitHub, you need to submit a "pull request" (PR).
 
 The golden rule of submitting PRs is to do things the way the project maintainers would want it done.
 
-You can't read the minds of the project maintainers, but you can look at [assembly.com/villeme/bounties](https://assembly.com/villeme/bounties).
-
 
 ### Submitting a Bug Report (or "Issue")
 
@@ -173,7 +171,6 @@ It usually helps them address the problem more quickly, so everyone wins!
 
 ## Best practices 
 
-* Make part of Assembly community in [assembly.com/villeme](https://assembly.com/villeme)
 * Follow this style guide: https://github.com/bbatsov/ruby-style-guide
 * Create one acceptance tests for each scenario of the feature you are trying to implement.
 * Create model and controller tests to keep 100% of code coverage at least in the new parts that you are writing.
